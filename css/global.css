@@ -21,6 +21,7 @@
    --color-disabled: #666;
    --font-base-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,'Helvetica Neue', sans-serif;
    --transparent: rgba(0,0,0,0);
+   --focus-ring: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='rgba(0,0,0,1)' stroke-width='2'/%3E%3C/svg%3E");
  }
 
 /**
@@ -174,7 +175,7 @@ select {
   background-position: center center;
   border-radius: 50%;
   width: 1.9em;
-  border: 0.2em solid var(--color-day-bg);
+  border: 0.17em solid var(--color-day-bg);
   background: var(--color-mid);
   box-shadow: 0px 0px 4px var(--color-shadow-light);
 }
@@ -197,12 +198,15 @@ select {
 
 /* focus and hover */
 .toggles [aria-pressed]:focus::after {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='rgba(0,0,0,1)' stroke-width='2'/%3E%3C/svg%3E");
+  background-image: var(--focus-ring);
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .toggles [aria-pressed]:hover::after {
+  background-image: var(--focus-ring);
+  background-position: center center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -229,16 +233,20 @@ select {
 
 /* disabled */
 .toggles [aria-pressed][disabled]::before {
-  background-color: transparent;
+  background-color: var(--color-mid);
   border-color: var(--color-disabled);
+  background-image: none;
 }
 
 .toggles [aria-pressed][disabled]::after {
   border-color: var(--color-disabled);
 }
 
-.toggles [aria-pressed][disabled]:hover::after {
+
+.toggles [aria-pressed][disabled]:hover::after,
+.toggles [aria-pressed][disabled]:hover {
   background-image: none;
+  cursor: auto;
 }
 
 /* Windows High Contrast Mode Support */
