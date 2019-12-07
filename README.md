@@ -1,6 +1,6 @@
-# Front-end Challenges Club 002 challenge
+# Front-Dnd Challenges Club 002 challenge
 
- First challenge for the Front-end Challenges Club.
+ Second challenge for the Front-end Challenges Club.
 
  ## Links 🔗
  [Challenge info](https://front-end-challenges.club/challenge-002-toggle-switch/)
@@ -9,4 +9,4 @@
 
  [Challenge Submission](https://superterrific.github.io/fecc-002/)
 
- Front-end Challenge Club is created by [Andy Bell](https://hankchizljaw.com/), [sign up here](https://front-end-challenges.club/)!
+ Front-End Challenges Club is created by [Andy Bell](https://hankchizljaw.com/), [sign up here](https://front-end-challenges.club/)!
