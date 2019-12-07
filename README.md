@@ -1,4 +1,4 @@
-# Front-Dnd Challenges Club 002 challenge
+# Front-End Challenges Club 002 challenge
 
  Second challenge for the Front-end Challenges Club.
 
